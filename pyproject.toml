@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "database-vacancies"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+requests = "^2.32.5"
+python-dotenv = "^1.1.1"
+psycopg2-binary = "^2.9.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+lint = [
+    "flake8 (>=7.3.0,<8.0.0)",
+    "mypy (>=1.18.2,<2.0.0)",
+    "black (>=25.9.0,<26.0.0)",
+    "isort (>=7.0.0,<8.0.0)"
+]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)"
+]
+
+[tool.black]
+line-length = 119
+exclude = "/(.git|venv)/"
+
+[tool.isort]
+line-length = 119
+
+[tool.mypy]
+disallow_untyped_defs = true
+warn_return_any = true
+exclude = 'venv'
