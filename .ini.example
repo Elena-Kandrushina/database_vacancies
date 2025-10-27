@@ -1,3 +1,4 @@
+[postgresql]
 host="DB_HOST"
 database="DB_NAME"
 user="DB_USER"
