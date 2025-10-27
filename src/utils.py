@@ -2,8 +2,9 @@ from typing import Dict
 
 # from src.api_hh import HeadHunterAPI
 import psycopg2
-from src.config import config
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+
+from src.config import config
 
 
 def get_db_connection() -> psycopg2.extensions.connection:
